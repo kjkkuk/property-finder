@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_222747) do
   enable_extension "plpgsql"
 
   create_table "properties", force: :cascade do |t|
+    t.bigint "user_id"
     t.string "name"
     t.string "address"
     t.integer "price"
@@ -24,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_06_222747) do
     t.string "photo"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_properties_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
