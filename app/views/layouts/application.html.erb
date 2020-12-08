@@ -12,8 +12,8 @@
 
   </head>
 
-  <body>
-  <% if ["public", "devise"].include?(controller.controller_name)%>
+  <body id="<%= controller.controller_name %>" class="<%= controller.action_name %>">
+  <% if ["public", "devise", "sessions"].include?(controller.controller_name)%>
   <header>
     <%= render "layouts/nav/public" %>
     <%= yield %>
@@ -24,7 +24,7 @@
     <div class="container-fluid">
       <div class="row">
         <%= render "layouts/nav/sidebar" %>
-        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4">
+        <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-md-4 mt-4">
         <%= yield %>
         </main>
       </div>
@@ -33,7 +33,9 @@
 
 
 
-    <%= render "layouts/footer" %>
+    <%#= render "layouts/footer" %>
+    <div id="notifications"><%= notice %></div>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
