@@ -7,7 +7,11 @@
 # Ignore bundler config.
 /.bundle
 
+# Ignore ide configuration
 .idea/
+
+# Ignore application configuration
+/config/application.yml
 
 # Ignore all logfiles and tempfiles.
 /log/*
