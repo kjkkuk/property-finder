@@ -1,0 +1,4 @@
+# 33:25 amazon install
+AWS_SECRET_ACCESS_KEY: "Ru8isKpu7sd2jh8WHorSN+P47ZKfQ/DGoS79OQ1F"
+AWS_ACCESS_KEY_ID: "AKIAZAUEHIEIYBCCTJQ2"
+S3_BUCKET: "properties-finder-dev"
